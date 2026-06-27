@@ -1,0 +1,312 @@
+{
+  "info": {
+    "_postman_id": "a954878c-2bf9-4a15-9762-751f2b2216e7",
+    "name": "functional excercise",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49465383",
+    "_collection_link": "https://go.postman.co/collection/49465383-a954878c-2bf9-4a15-9762-751f2b2216e7?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Filters",
+      "item": [
+        {
+          "name": "1. Stock && Sales",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/products/filters/one?stockGreaterTo=10&salesGreaterTo=50",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "products",
+                "filters",
+                "one"
+              ],
+              "query": [
+                {
+                  "key": "stockGreaterTo",
+                  "value": "10"
+                },
+                {
+                  "key": "salesGreaterTo",
+                  "value": "50"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "2. Average By Category",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/products/filters/two?category=BOARD_GAME",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "products",
+                "filters",
+                "two"
+              ],
+              "query": [
+                {
+                  "key": "category",
+                  "value": "BOARD_GAME"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "3. Counts Product By Category",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/products/filters/three",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "products",
+                "filters",
+                "three"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "4. Most Expensive By Category",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/products/filters/four?category=BOARD_GAME",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "products",
+                "filters",
+                "four"
+              ],
+              "query": [
+                {
+                  "key": "category",
+                  "value": "BOARD_GAME"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "5. Top Best Average Rating",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/products/filters/five?limit=5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "products",
+                "filters",
+                "five"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "6. Tag List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/products/filters/six",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "products",
+                "filters",
+                "six"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "7. Total Potential Value",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/products/filters/seven",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "products",
+                "filters",
+                "seven"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "8. Restock Product",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/products/filters/eight?limit=10",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "products",
+                "filters",
+                "eight"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Crud Product",
+      "item": [
+        {
+          "name": "New Request",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"tags\": [\"muñeca\", \"moda\"]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/products/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "products",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Product",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "  {\n    \"name\": \"Muñeco peluche oso\",\n    \"category\": \"FIGURE\",\n    \"minimumAge\": 2,\n    \"price\": 11999.0,\n    \"stock\": 14,\n    \"brand\": \"PeluKids\",\n    \"averageRating\": 4.4,\n    \"salesLastThirtyDays\": 95,\n    \"tags\": [\"peluche\", \"suave\"]\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/products/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "products",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Product List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/products/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "products",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

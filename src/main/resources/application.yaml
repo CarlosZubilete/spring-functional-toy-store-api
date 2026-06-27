@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: exercise-advance
+
+  # Moved back 2 spaces to be a direct child of 'spring'
+  datasource:
+    url: jdbc:mysql://localhost:3306/functional_exercise_advance_db?useSSL=false&serverTimezone=UTC&characterEncoding=UTF-8&allowPublicKeyRetrieval=true
+    username: test_user
+    password: "123456" # Pro tip: Putting numbers in quotes avoids reading parsing issues
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # Moved back 4 spaces to be a direct child of 'spring'
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect

@@ -1,0 +1,29 @@
+services:
+  bd:
+    image: mysql:9
+    container_name: functional_exercise_advance
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: my_security_password
+      MYSQL_DATABASE: functional_exercise_advance_db
+      MYSQL_USER: test_user
+      MYSQL_PASSWORD: "123456"
+    ports:
+      - "3306:3306"
+    volumes:
+      - functional_exercise_advance_data:/var/lib/mysql
+    networks:
+      - functional_exercise_advance_network
+
+volumes:
+  functional_exercise_advance_data:
+    # name: functional_exercise_advance_data
+    external: true
+
+networks:
+  functional_exercise_advance_network:
+    # name: functional_exercise_advance_network
+    driver: bridge
+    external: true
+
+# docker exec -e LANG=C.UTF-8 -it functional_exercise_advance bash
